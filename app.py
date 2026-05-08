@@ -313,7 +313,7 @@ def main() -> None:
     for message in st.session_state.messages:
         render_message(message)
 
-    user_text = st.chat_input("请输入任意内容，演示会按下一轮继续")
+    user_text = st.chat_input("请输入问题")
     if user_text:
         step_index = min(st.session_state.demo_index, len(DEMO_STEPS) - 1)
         scripted_user_text = DEMO_STEPS[step_index]["user_demo"]
